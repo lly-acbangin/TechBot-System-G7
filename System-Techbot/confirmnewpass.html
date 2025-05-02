@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Password</title>
+  <link rel="stylesheet" href="confirmnewpass.css">
+</head>
+
+<body>
+  <div class="background"></div>
+
+  <div class="account-card">
+    <img src="https://cdn-icons-png.flaticon.com/512/3039/3039423.png" class="lock-icon">
+
+    <h3>Change Password</h3>
+
+<div class="password-row">
+  
+
+  <div class="input-group">
+    <label>New Password</label>
+    <div class="password-container">
+      <input type="password" id="new-password" placeholder="Enter new password" onfocus="showRequirements()">
+      <img src="https://cdn-icons-png.flaticon.com/512/565/565655.png" 
+           class="toggle-password" onclick="togglePassword('new-password', this)">
+    </div>
+
+    <div class="password-requirements" id="requirements">
+      <small>Password must contain:</small>
+      <ul>
+        <li id="length">
+          <img src="https://cdn-icons-png.flaticon.com/512/2217/2217292.png
+          " width="16" class="icon"> At least 8 characters
+        </li>
+        <li id="case">
+          <img src="https://cdn-icons-png.flaticon.com/512/2217/2217292.png
+          " width="16" class="icon"> One uppercase & lowercase letter
+        </li>
+        <li id="number">
+          <img src="https://cdn-icons-png.flaticon.com/512/2217/2217292.png
+          " width="16" class="icon"> One number
+        </li>
+        <li id="special">
+          <img src="https://cdn-icons-png.flaticon.com/512/2217/2217292.png
+          " width="16" class="icon"> One special character (e.g., ! @ # $ % ^ & *)
+        </li>
+        <li id="space">
+          <img src="https://cdn-icons-png.flaticon.com/512/2217/2217292.png
+          " width="16" class="icon"> No spaces
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="input-group">
+    <label>Confirm New Password</label>
+    <div class="password-container">
+      <input type="password" placeholder="Re-enter new password" id="confirm-password">
+      <img src="https://cdn-icons-png.flaticon.com/512/565/565655.png" 
+           class="toggle-password" onclick="togglePassword('confirm-password', this)">
+    </div>
+  </div>
+</div>
+
+    <div class="button-group">
+      <a href="MainHomepage.html"><button class="home-btn">Cancel</button></a>
+      <button class="save-btn" onclick="openModal()">Change Password</button>
+    </div>
+  </div>
+
+  <div id="saveChangesModal" class="modal">
+    <div class="modal-content">
+      <h2>Change Password?</h2>
+      <p>Your current password will be replaced. 
+        Make sure to remember your new one!</p>
+      <div class="modal-buttons">
+        <button class="cancels-btn" onclick="closeModal()">Cancel</button>
+        <button class="confirm-btn" onclick="showConfirmationModal()">Yes, Change Password</button>
+      </div>
+
+      <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+          <img src="https://cdn-icons-png.flaticon.com/128/12901/12901762.png" alt="Check Icon">
+          <h2>Password Updated!</h2>
+          <div class="modal-buttons">
+            <button class="confirm-btn" onclick="closeConfirmationModal()">OK</button>
+          </div>
+
+  <script src="confirmnewpass.js"></script> </script>
+
+  
+
+</body>
+
+</html>

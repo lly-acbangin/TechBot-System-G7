@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBot-QCU</title>
+    <link rel="stylesheet" href="homepageicon.css">
+    <script src="homepageicon.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"></script>
+    
+    <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyAfyXlKY-x2Fgrz20wYYXw7AAaK1kc3SVQ",
+        authDomain: "techbot-56772.firebaseapp.com",
+        projectId: "techbot-56772",
+        storageBucket: "techbot-56772.appspot.com",
+        messagingSenderId: "1008993231244",
+        appId: "1:1008993231244:web:992aae95be7e56130776a9"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+</script>
+
+</head>
+<body>
+    <div class="background-image"></div>
+    <header>
+        <img src="./images/qcu_logo.png" alt="Metro Manila College Logo" class="school-logo">
+        <div class="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="User Profile" class="user-icon" onclick="toggleDropdown()">
+            <img src="./images/achievement.png" alt="Medal" class="medal-icon" id="achievementbtn">
+        </div>
+        
+        
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-header">
+                <p class="user-name"><strong>Delacruz, Delfin</strong></p>
+                <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="User Profile" class="dropdown-user-icon">
+            </div>
+            <hr>
+            <a href="useraccount.html">Account Details</a>
+            <hr>
+            <a href="MainHomepage.html" id="signOutBtn">Sign Out</a>
+            <div id="signOutModal" class="modal">
+                <div class="modal-content">
+                    <h2>Sign Out Now?</h2>
+                    <p>Your progress will be saved, and you can log back in anytime!</p>
+        <div class="modal-buttons">
+            <button class="cancels-btn" id="cancelSignOut">Cancel</button>
+            <button class="confirm-btn" id="confirmSignOut">Yes, Sign Out</button>
+        </div>
+    </div>
+</div>
+
+            
+        </div>
+        
+        
+    </header>
+
+    <main class="content-container">
+        <h1>HI, QCIAN!</h1>
+        
+        <div class="bot-title-container">
+            <img src="./images/homepagerobot.png" alt="TechBot" class="bot-image">
+            <p class="bot-name">I am TechBot</p>
+        </div>
+        
+        <p class="bot-description">A CHATBOT FOR INFORMATION AND TECHNOLOGY STUDENTS</p>
+        
+        <div class="search-container">
+            <input type="text" placeholder="Search Lesson" class="search-input">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="search-message" id="searchMessage"></div>
+
+        <!-- NEW! -->
+        <div class="lessons-container" id="lessons-container">
+            <h2>Available Lessons</h2>
+            <div class="lessons-list" id="lessons-list"></div>
+        </div>
+        <!-- END -->
+
+    </main>
+</div>
+
+    
+<footer class="site-footer">
+    <div class="footer-tagline">
+        <p class="college-name">Quezon City University</p>
+        <p class="mission-tagline">Our Mission, Your Future</p>
+    </div>
+    
+    <div class="footer-columns">
+        <!-- Column 1: About Us -->
+        <div class="footer-col">
+            <h3>About Us</h3>
+            <p>An Intelligent Chatbot for Computer Programming Language with Learning and Practical Exercises is a tool that helps learners understand coding by acting like a virtual tutor.</p>
+            <p class="copyright">©2025 TechBot</p>
+        </div>
+        
+        <!-- Column 2: Mission & Vision -->
+        <div class="mission-vision-container"> 
+            <div class="mission">
+            <h3>Mission</h3>
+            <p>To provide a comprehensive education that enhances the lives of QCU students
+                for nation-building and as world citizens </p>
+            </div>
+            <div class="vision">
+            <h3>Vision</h3>
+            <p>To be recognized as the #1 local university of
+                employable graduates.
+            </p> 
+        </div>
+    </div>
+        
+        <!-- Column 3: Contact -->
+        <div class="footer-col contact-info">
+            <div class="contact-item">
+                <img src="./images/address.png" alt="Address" class="contact-icon">
+                <span>673 Quirino Hwy, Novaliches, Quezon City, Metro Manila, Philippines</span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="contact-item">
+                <img src="./images/fblogo.png" alt="Facebook" class="contact-icon">
+                <span>Quezon City University</span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="contact-item">
+                <img src="./images/email.png" alt="Email" class="contact-icon">
+                <span>QCUniversity@quezoncity.gov.ph</span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="contact-item">
+                <img src="./images/contact.png" alt="Phone" class="contact-icon">
+                <span>(02)8806-3049</span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="contact-item">
+                <img src="./images/weblogo.png" alt="Website" class="contact-icon">
+                <span>qcu.edu.ph</span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="chatbot-icon">
+        <img src="./images/chatbot.png" alt="Chatbot">
+    </div>
+</footer>
+
+</body>
+</html>

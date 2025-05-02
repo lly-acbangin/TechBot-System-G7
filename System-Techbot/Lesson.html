@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LessonPage</title>
+    <link rel="stylesheet" href="Lesson.css">
+</head>
+<body>
+
+   <!-- Lesson Modal -->
+<div class="modal" id="lessonModal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeLesson">&times;</button>
+        <div class="lesson-header">Lesson 1 : Introduction to Visual Basic 6.0</div>
+        <div class="lesson-content">
+            <!-- Your lesson paragraphs here -->
+        </div>
+        <button class="start-quiz-btn" id="openQuizModal">START QUIZ</button>
+    </div>
+</div>
+
+<!-- Start Quiz Modal -->
+<div class="modal" id="quizModal">
+    <div class="modal-content quiz-box">
+        <div class="quiz-body"> 
+            <img src="./images/startquiz.png" alt="Quiz Icon" class="quiz-icon">
+            <div class="content">
+                <h2>Start the quiz?</h2>
+                <p>Answer the questions to test your knowledge. <br> Do your best!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-btn" id="cancelQuiz">Cancel</button>
+                <button class="start-btn" id="confirmStartQuiz">Yes, Start Quiz</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="Lesson.js"></script>
+
+</body>
+</html>

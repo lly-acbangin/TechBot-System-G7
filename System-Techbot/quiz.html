@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz Page</title>
+        <link rel="stylesheet" href="quiz-style.css">
+        <link rel="stylesheet" href="Results.css">
+    </head>
+    <body>
+        <!-- Quiz Container -->
+        <div class="quiz-container" id="quiz-container">
+            <!-- Header -->
+            <div class="quiz-header">
+                <img src="./images/chatbot.png" alt="Chatbot" class="chatbot-icon"> <!-- Replace with the actual path -->
+                <span class="quiz-title">Quiz</span>
+                <button class="close-btn" onclick="redirectToHome()">X</button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar" id="progress-bar"></div>
+
+            <!-- Quiz Content -->
+            <div class="quiz-content">
+                <div class="question-box" id="question-box">
+                </div>
+                <div class="quiz-number" id="quiz-number">1/10</div>
+                <div class="answer-options" id="answer-options">
+                    <!-- Options will be dynamically generated -->
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="score" id="score-display">0/10</div>
+                <button id="next-btn" class="btn" onclick="moveToNextQuestion()">Next</button>
+            </div>
+        </div>
+
+        <!-- Results Container -->
+        <div class="result-container" id="result-container" style="display: none;">
+            <h2 class="score">Score: <span id="score"></span></h2>
+            <div class="robot">
+                <img id="robot-image" src="" alt="Result Robot">
+            </div>
+            <p class="message" id="result-message"></p>
+            <div class="buttons">
+                <button id="backLesson" onclick="goBack()">Back to Lesson</button>
+                <button id="retryQuiz" onclick="retryQuiz()">Retry the Quiz</button>
+            </div>
+        </div>
+
+        <script src="quiz-script.js"></script>
+    </body>
+</html>

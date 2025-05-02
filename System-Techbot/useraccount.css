@@ -1,0 +1,450 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.background {
+  background-image: url('./images/qcu_bg.png');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(2px) brightness(0.8);
+}
+
+.account-card {
+  width: 850px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin: 100px auto;
+  padding: 20px 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.title-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  background-color: #d8e7f5;
+  border-radius: 50%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/219/219983.png');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 35px;
+}
+
+
+.section-group {
+  width: 220px;
+}
+
+.section-group label {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.section-group select {
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  
+}
+
+
+.form-section {
+  flex: 1;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.input-group label {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.input-group input:hover,
+.input-group select:hover {
+  border-color: #000070;
+  background-color: #f3f1ff;
+}
+
+.password-display {
+  background: #f3f1ff;
+  padding: 2px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+  
+}
+
+
+.change-password {
+  font-size: 11px;
+  color: #900000;
+  text-decoration: underline;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.change-password:hover {
+  color: #de3c3c;
+}
+
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 50px;
+  background-color: #900000;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #de3c3c;
+  transform: scale(1.05);
+}
+
+.password-requirements {
+  display: none;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 12px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  margin-top: 5px;
+  z-index: 10;
+}
+
+.password-requirements ul {
+  padding-left: 15px;
+  margin: 5px 0;
+}
+
+.password-requirements li {
+  margin-bottom: 5px;
+}
+
+
+#new-password:focus + .password-requirements {
+  display: block;
+}
+
+.lock-icon {
+  width: 100px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+  
+}
+
+.password-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.input-group label {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.input-group input:hover {
+  border-color: #000070;
+  background-color: #f3f1ff;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+
+.password-requirements {
+  background-color: #f3f1ff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 10px;
+  display: none;
+  margin-top: 10px;
+  width: 95%; 
+  box-sizing: border-box;
+}
+
+#new-password:focus + .password-requirements {
+    display: block;
+  }
+  
+
+.forgot-password {
+  font-size: 12px;
+  color: #900000;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.forgot-password:hover {
+  color: #de3c3c;
+}
+
+.password-container {
+  position: relative;
+  width: 90%;
+}
+
+.password-container input {
+  width: 95%;
+  padding-right: 15px;
+}
+
+.toggle-password {
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-requirements ul {
+  padding-left: 15px;
+  margin: 5px 0;
+}
+
+.password-requirements li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #333;
+}
+
+.password-requirements li img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.password-requirements li.valid {
+  color: #de3c3c;
+}
+
+body {
+  background: url('your-blurred-background.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.otp-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 450px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.otp-card img {
+  width: 80px;
+  margin-bottom: 0px;
+}
+
+.otp-card h3 {
+  margin-bottom: 5px;
+}
+
+.otp-card p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.otp-inputs input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.resend {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.resend a {
+  color: #de3c3c;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 20px;
+  left: 21px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal-content {
+  background: #f6e9b2;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  width: 400px;
+  position: relative;
+}
+
+.modal img{
+  width: 80px;
+  margin-bottom: 0px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.cancels-btn, .confirm-btn {
+  background: #900000;
+  color: white;
+  border: none;
+  padding: 10px 20px; 
+  border-radius: 2px; 
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+.cancels-btn {
+  background: #900000;
+}
+
+.confirm-btn:hover {
+  background: #de3c3c;
+}
+

@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./images/qcu.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.container {
+    flex: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.college-logo {
+    height: 150px;
+    width: auto;
+}
+
+.auth-links {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.auth-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.auth-link:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 4px black;
+}
+
+.bot-title-container {
+    display: flex;
+    align-items: center;
+    gap:10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.bot-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0);
+    margin-right: 10px;;
+}
+.bot-name {
+    font-size: 5rem;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    align-items: right;
+}
+.bot-description {
+    max-width: 600px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-style: italic;
+    font-family: 'Verdana';
+    font-weight: bold;
+    color:white;
+    text-shadow: 2px 2px black;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 1px black;
+}
+
+.intro-text {
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.intro-text p:first-child {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.intro-text p:last-child {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #000070;
+    box-shadow: 0 0 8px rgba(18, 0, 123, 0.525);
+}
+
+.search-button {
+    padding: 12px 25px;
+    background-color: #900000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #de3c3c;
+}
+
+.search-message {
+    color: #ffeb3b;
+    font-size: 0.9rem;
+    font-weight: 500;
+    height: 1.2rem;
+}
+
+.site-footer {
+    background: #000070;
+    color: white;
+    padding: 40px 60px;
+    position: relative;
+}
+
+/* Footer Tagline */
+.footer-tagline {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-tagline .college-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-tagline .mission-tagline {
+    font-style: italic;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-col:first-child {
+    background-color: #17198F; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 22%;
+}
+
+.footer-col h3 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+        
+}
+
+.footer-col p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+/* Mission & Vision Section */
+.mission-vision-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    flex: 1;
+    text-align: left;
+}
+
+.mission-vision-container .mission,
+.mission-vision-container .vision {
+    width: 50%;
+    text-align: center;
+}
+
+.mission-vision-container h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mission-vision-container ul {
+    text-align: left;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.mission-vision-container ul li {
+    font-size: 1.9rem;
+    margin-bottom: 8px;
+}
+
+.mission-vision-container p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.contact-info {
+    width: 22%;
+}
+
+.contact-info .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.contact-info .contact-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.site-footer .copyright {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    right: 20px;
+    left: 20px;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 992px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col {
+        width: 90% !important;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .mission-vision-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mission-vision-container .mission,
+    .mission-vision-container .vision {
+        width: 100%;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+    
+    .contact-info .contact-item {
+        justify-content: center;
+    }
+}
+
+.chatbot-icon {
+    position: fixed;
+    bottom: 65px;
+    right: 40px;
+}
+
+.chatbot-icon img {
+    width: 100px;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.school-logo {
+    width: 60px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    position: relative;
+}
+
+
+.profile img {
+    width: 40px;
+}
+
+.profile img:last-child {
+    width: 40px; 
+    margin-top: 10px; 
+}
+
+
+body {
+    background-image: url('./images/qcu.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* profile section ito hehe */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.lesson-list {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.lesson-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions</title>
+    <link rel="stylesheet" href="terms&conditions.css">
+</head>
+<body>
+    <div class="terms-container">
+        <h2>Terms & Conditions</h2>
+        <div class="terms-content">
+            <h3>1. Introduction</h3>
+            <p>Welcome to TechBot. By accessing and using this platform, you agree to comply with the terms and conditions outlined below. If you do not agree, please refrain from using the system.</p>
+
+            <h3>2. User Responsibilities</h3>
+            <ul>
+                <li>Users must provide accurate information when registering and using the system.</li>
+                <li>Unauthorized access, modification, or interference with system functionalities is strictly prohibited.</li>
+                <li>Users should follow ethical guidelines when interacting with the chatbot and educational materials.</li>
+            </ul>
+
+            <h3>3. System Security</h3>
+            <ul>
+                <li>The TechBot System is designed with robust security protocols to protect data integrity.</li>
+                <li>Users are prohibited from attempting to bypass security measures or exploit vulnerabilities.</li>
+                <li>Any detected security breaches must be reported to Quezon City University immediately.</li>
+            </ul>
+
+            <h3>4. Data Storage and Access</h3>
+            <ul>
+                <li>The system stores student progress, chatbot interactions, and lesson content in a secure database (MySQL).</li>
+                <li>Data access is limited to authorized users for educational purposes only.</li>
+                <li>Quezon City University reserves the right to update or modify stored data as part of system improvements.</li>
+            </ul>
+
+            <h3>5. Limitation of Liability</h3>
+            <ul>
+                <li>TechBot System is provided for educational purposes only, and Quezon City University is not liable for any misinterpretation of content.</li>
+                <li>The institution is not responsible for system downtimes due to technical issues, maintenance, or security incidents.</li>
+            </ul>
+
+            <h3>6. Modifications to Terms</h3>
+            <p>Quezon City University reserves the right to update these terms. Users will be notified of significant changes.</p>
+        </div>
+
+        <!-- Button positioned outside scrollable content for better visibility -->
+        <!-- terms&conditions.html -->
+<div class="agree-button-container">
+    <button id="agreeButton">I AGREE</button>
+</div>
+
+<script>
+    // Redirect to create-account.html with a query parameter
+    document.getElementById("agreeButton").addEventListener("click", function () {
+        window.location.href = "signup.html?agree=terms";
+    });
+</script>
+    </div>
+</body>
+</html>

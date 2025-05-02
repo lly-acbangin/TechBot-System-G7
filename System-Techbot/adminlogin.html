@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBot Admin Login</title>
+    <link rel="stylesheet" href="adminlogin.css">
+    <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app-compat.js"> </script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore-compat.js"> </script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth-compat.js"> </script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            <img src="./images/loginrobot.png" alt="TechBot Logo" class="logo">
+            <h1 class="techbot">TechBot</h1>
+        </div>
+        <div class="right-container">
+            <h2>LOGIN</h2>
+            <form id="loginForm">
+                <label for="username">*Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+
+                <label for="password">*Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <img src="./images/eyehidden.png" class="toggle-password" onclick="togglePassword('password', this)" alt="toggle visibility">
+                </div>
+
+                <button type="submit" class="login-btn">LOG IN</button>
+
+        <p class="forgot-password">
+            <a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+
+        <p id="generalError" class="error-message"></p>
+      </form>
+
+      <!-- Forgot Password Forms (Hidden at first) -->
+      <div id="forgotPasswordSection" class="hidden">
+        <h2>Forgot Password</h2>
+
+      <!-- Step 1: Enter Username -->
+  <form id="usernameForm">
+    <label for="resetUsername">Enter Username</label>
+    <input type="text" id="resetUsername" required>
+    <button type="submit" class="login-btn">Submit</button>
+  </form>
+
+  <!-- Step 2: Security Question -->
+  <form id="securityQuestionForm" class="hidden">
+    <label id="securityQuestionLabel">What is the name of the system?</label>
+    <input type="text" id="securityAnswer" placeholder="Your answer" required>
+    <button type="submit" class="login-btn">Submit Answer</button>
+  </form>
+
+  <!-- Step 3: Change Password -->
+<form id="newPasswordForm" class="hidden">
+  <label for="newPwd">New Password</label>
+  <div class="password-container">
+    <input type="password" id="newPwd" required>
+    <img src="./images/eyehidden.png" class="toggle-password" onclick="togglePassword('newPwd', this)" alt="toggle visibility">
+  </div>
+
+  <label for="confirmPwd">Confirm Password</label>
+  <div class="password-container">
+    <input type="password" id="confirmPwd" required>
+    <img src="./images/eyehidden.png" class="toggle-password" onclick="togglePassword('confirmPwd', this)" alt="toggle visibility">
+  </div>
+
+  <button type="submit" class="login-btn">Reset Password</button>
+        </form>
+
+        <p id="successMessage" class="hidden" style="color: green; font-weight: bold;">Password reset successfully!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="adminlogin.js"></script>
+</body>
+</html>

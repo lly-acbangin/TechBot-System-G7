@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('images/qcu_bg.png') center/cover no-repeat;
+    position: relative;
+}
+
+/* Full-screen Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+/* Large Modal Content */
+.modal-content {
+    background: white;
+    width: 80%;
+    height: 85%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: white;
+    color:black;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Lesson Header */
+.lesson-header {
+    background: #000070;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Scrollable Content */
+.lesson-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Enables scrolling inside the modal */
+    max-height: 70vh;
+    text-align: center;
+}
+
+/* Start Quiz Button */
+.start-quiz-btn {
+    background: #900000
+    ;
+    color: white;
+    padding: 15px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 200px;
+    margin: 10px auto;
+    display: block;
+}
+
+/* ======= Start Quiz Modal ======= */
+.quiz-box {
+    background: #fff8c6;
+    width: 40%;
+    height: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.content h2{
+    font-family: 'verdana';
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+/* Quiz Icon */
+.quiz-icon {
+    width: 20%;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.modal-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cancel-btn, .start-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #900000;
+    color: white;
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.start-btn {
+    background: #900000;
+    color: white;
+}
+
+#quizModal {
+    display: none;
+    pointer-events: auto;
+}
+
+#lessonModal {
+    display: flex;
+}

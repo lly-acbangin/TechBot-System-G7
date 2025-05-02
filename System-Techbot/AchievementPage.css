@@ -1,0 +1,95 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background: url('./images/qcu_bg.png') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Overlay with blur */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Achievement Modal Box */
+.modal {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    width: 85%;
+    height: 85%;
+    position: relative;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.modal-header img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.modal-header h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 30%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.achievement-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 40px;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.achievement-content {
+    text-align: center;
+}
+
+.achievement-content img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.achievement-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0D47A1;
+}

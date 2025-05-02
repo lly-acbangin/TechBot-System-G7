@@ -1,0 +1,467 @@
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('./images/qcu_bg.png') no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    padding-right: 40px;
+}
+
+.left-section {
+    text-align: center;
+    color: white;
+    margin-right: 220px;
+    margin-left: 150px;
+}
+
+.left-section .logo {
+    width: 420px;
+    height: auto;
+    margin-top: -50px;
+    margin-bottom: 10px;
+    margin-left: -50px;
+    display: block;
+}
+
+.left-section h2 {
+    font-size: 30px;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.left-section h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px !important;
+    margin-left: px;
+    font-size: 36px;
+}
+
+.welcome {
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+    margin-left: -45px;
+}
+
+.techbot {
+    font-size: 70px;
+    font-weight: 1000; 
+    display: block;
+    margin-top: -40px;
+    font-family: 'Montserrat', sans-serif; 
+    margin-left: -50px;
+}
+
+.right-section {
+    background-color: white;
+    padding: 0px 70px 0px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.right-section h1 {
+    font-size: 2rem;
+    color: #000070;
+    text-align: center;
+    margin-bottom: 10px 0 10px 0;
+    padding-left: 30px;
+    font-weight: 800 !important;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;  
+}
+
+.input-box {
+    width: 47%;
+}
+
+.input-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: 3px;
+    margin-top: 6px;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section {
+    display: block;
+    width: 52% !important;
+    min-width: 100px !important; /* Force it to be at least 300px wide */
+    margin-left: 10px;
+    margin-right:-22px;
+}
+
+
+#section:hover {
+    border-color: #000070 !important;
+    background-color: #f3f1ff ;
+}
+
+#section:focus {
+    outline: none;
+    border-color: #000070!important;
+    box-shadow: 0 0 5px rgba(18, 0, 123, 0.525);  
+}
+
+input:hover {
+    border-color: #000070 !important;
+    background-color: #f3f1ff;
+}
+
+input:focus {
+    outline: none;
+    border-color: #000070 !important;
+    box-shadow: 0 0 5px rgba(18, 0, 123, 0.525);
+}
+
+.centered-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.full-width {
+    width: 100%; /* Full width of the form */
+}
+
+.error-message {
+    font-family: 'Inter', sans-serif;
+    color: #a10000;
+    font-size: 13x;
+    margin-top: 5px;
+    margin-bottom: -1%;
+    margin-left: 30px;
+}
+
+#emailError {
+    font-family: 'Inter', sans-serif;
+    color: #a10000;
+    font-size: 13x;
+    margin-top: 5px;
+    margin-bottom: -1%;
+    margin-left: 30px;
+}
+
+.signup-btn:hover {
+    background: #de3c3c;
+    transform: scale(1.05);
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 105%;
+}
+
+.password-wrapper input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.password-requirements {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 13px;
+    position: absolute;
+    width: 180px;
+    position: absolute;
+    right: 210px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.password-requirements label {
+    font-size: 13px;
+    margin-top: 4px;
+}
+  
+  .password-requirements ul {
+    padding-left: 15px;
+    margin: 5px 0;
+    list-style: none;
+  }
+  
+  .password-requirements li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .password-requirements .icon {
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+  }
+  
+  input::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #888;  
+}
+
+.toggle-password {
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 93%;
+}
+
+.togglePassword:hover {
+    opacity: 0.7;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    margin-top: 10px; 
+}
+
+label[for="privacy"] {
+    margin-top: -8px;
+    margin-bottom: -5px;
+}
+
+#privacy {
+    margin-top: -5px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin: 0; 
+    margin-right: 10px; 
+    width: 16px;
+    height: 16px;
+    accent-color: #900000; 
+}
+
+
+.checkbox-group label {
+    font-size: 14px; 
+    color: #000000;
+    font-weight: normal; 
+    line-height: 1.5; 
+}
+
+.checkbox-group a {
+    color: #900000; 
+    font-weight: bold;
+    text-decoration: none; 
+    font-style: italic; 
+    transition: color 0.3s ease; 
+}
+
+.checkbox-group a:hover {
+    color: #de3c3c; 
+    text-decoration: underline;
+}
+
+button {
+    width: 35%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 0px; 
+    background-color: #900000;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bolder;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: block;
+}
+
+.login-btn:hover {
+    background: #de3c3c;
+    transform: scale(1.05);
+}
+
+p {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #000000;
+}
+
+p a {
+    color: #900000
+    ;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+}
+
+p a:hover {
+    color: #de3c3c;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+    }
+
+    .left-container {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .right-container {
+        width: 100%;
+        padding: 20px; 
+        text-align: center;
+    }
+
+    .right-container input,
+    .password-container {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #FFFEBC;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    width: 350px;
+    height: 200px;
+}
+
+.modal-content h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.modal-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#cancelRedirect {
+    font-family: 'Inter', sans-serif;
+    background-color: #900000;
+    color: #ffffff;
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#cancelRedirect:hover {
+    background-color: #de3c3c;
+}
+
+#confirmRedirect {
+    font-family: 'Inter', sans-serif;
+    background-color: #900000;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 180px;
+}
+
+#confirmRedirect:hover {
+    background-color: #de3c3c;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #900000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #de3c3c;
+}
+
+.messageDiv{
+    background-color: #de3c3c;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+}

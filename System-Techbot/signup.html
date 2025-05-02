@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="signup.css">
+    <script>
+        function togglePassword(inputId) {
+            const passwordField = document.getElementById(inputId);
+            const type = passwordField.type === "password" ? "text" : "password";
+            passwordField.type = type;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="./images/loginrobot.png" alt="TechBot logo" class="logo">
+            <span class="welcome">WELCOME TO</span><br>
+                <span class="techbot">TechBot</span>
+                <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        </div>
+        <div class="right-section">
+            <h1>CREATE ACCOUNT</h1>
+            <form>
+                <p class="error-text" id="general-error"></p>
+                <div id="signUpMessage" class="messageDiv" style="display:none;"> </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="first-name">*First Name</label> 
+                        <input type="text" id="first-name" placeholder="Enter your first name">
+                    </div>
+                    <div class="input-box">
+                        <label for="last-name">*Last Name</label>
+                        <input type="text" id="last-name" placeholder="Enter your last name">
+                        
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="middle-name">Middle Name</label>
+                        <input type="text" id="middle-name" placeholder="Enter your middle name">
+                    </div>
+                    <div class="input-box">
+                        <label for="section">*Section</label>
+                        <input type="text" id="section" placeholder="Enter your section">
+                    </div>
+                    
+                </div>
+                <div class="centered-fields">
+                    <div class="input-box full-width">
+                        <label for="StudentNumber">*Student Number</label>
+                        <input type="text" id="StudentNumber" placeholder="Enter your Student Number" oninput="validateStudentNumber()">
+                        <p id="StudentNumberError" class="error-message"></p>
+                    </div>
+                    
+                    <div class="input-box full-width">
+                        <label for="email">*Email</label>
+                        <input type="email" id="email" placeholder="Enter your email address" required onfocus="this.setCustomValidity('')">
+                        <p id="emailError"></p>
+                      
+
+                    </div>
+                    <div class="input-box full-width">
+                        <label for="password">*Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" placeholder="Create your password">
+                            <img src="./images/eyehidden.png" onclick="togglePassword('password', this)" class="toggle-password">
+                        </div>
+                        <div class="password-requirements">
+                            <ul>
+                                <label for="password-requirements">Password must contain:</label>
+                                <li id="length"><img src="https://cdn-icons-png.flaticon.com/512/2217/2217292.png" class="icon"> At least 8 characters</li>
+                                <li id="uppercase"><img src="https://cdn-icons-png.flaticon.com/512/2217/2217292.png" class="icon"> One uppercase letter</li>
+                                <li id="lowercase"><img src="https://cdn-icons-png.flaticon.com/512/2217/2217292.png" class="icon"> One lowercase letter</li>
+                                <li id="number"><img src="https://cdn-icons-png.flaticon.com/512/2217/2217292.png" class="icon"> One number</li>
+                                <li id="special"><img src="https://cdn-icons-png.flaticon.com/512/2217/2217292.png" class="icon"> One special character (e.g., ! @ # $ % ^ & *)</li>
+                                <li id="no-space"><img src="https://cdn-icons-png.flaticon.com/512/2217/2217292.png" class="icon"> No spaces</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="input-box full-width">
+                        <label for="confirm-password">*Confirm Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                            <img src="./images/eyehidden.png" onclick="togglePassword('confirm-password', this)" class="toggle-password">
+                        </div>
+                    </div>
+                    <div class="checkbox-container">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">I read and agree to 
+                                <a href="terms&conditions.html">Terms and Conditions</a>
+                            </label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="privacy">
+                            <label for="privacy">I read and agree to 
+                                <a href="privacypolicy.html">Privacy Policy</a>
+                            </label>
+                        </div>
+                    </div>
+                <button id="submit" type="submit" class="signup-btn" >SIGN UP</button>
+                <p>Already have an account? <a href="login.html">Log in</a></p>
+            </form>
+        </div>
+    </div>
+   
+<!-- Modal Container -->
+<div id="redirectModal" class="modal">
+    <div class="modal-content">
+        <h2>Account Created Successfully</h2>
+        <p>You can now log in and start using TechBot!</p>
+        <div class="button-container">
+            <button id="cancelRedirect">Cancel</button>
+            <button id="confirmRedirect">Go to Login</button>
+
+        </div>
+    </div>
+</div>
+
+
+    <script type="module" src="signup.js"></script>
+</body>
+</html>

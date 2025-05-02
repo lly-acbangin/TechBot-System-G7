@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AdminDashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+        import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-storage.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAfyXlKY-x2Fgrz20wYYXw7AAaK1kc3SVQ",
+          authDomain: "techbot-56772.firebaseapp.com",
+          projectId: "techbot-56772",
+          storageBucket: "techbot-56772.firebasestorage.app",
+          messagingSenderId: "1008993231244",
+          appId: "1:1008993231244:web:992aae95be7e56130776a9"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const storage = getStorage(app);
+
+        //Make the DB object available globally
+        window.db = db;
+        window.firestoreFns = { collection, addDoc, getDocs };
+        window.storage = storage;
+        window.storageFns = { ref, uploadBytes, getDownloadURL };
+      </script>
+      
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="./images/qcu_logo.png" alt="QCU Logo" class="logo">
+            <h1>Welcome, Admin</h1>
+            <div class="spacer"></div>
+            <button class="logout-btn" onclick="handleLogout()">Log out</button>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <img src="./images/happybot.png" alt="Chatbot" class="chatbot-logo">
+            <button onclick="loadContent('dashboard')">Dashboard</button>
+            <button onclick="loadContent('learningMaterials')">Learning Materials</button>
+            <button onclick="loadContent('quizzes')">Quizzes</button>
+            <button onclick="loadContent('studentProgress')">Student Progress</button>           
+        </nav>
+        <main class="content" id="content">
+            <!-- Summary cards will be loaded here dynamically -->
+        </main> 
+    </div>
+   
+      <script>
+        function handleLogout() {
+          // You can clear auth data if you're using Firebase auth or session storage
+          // firebase.auth().signOut().then(() => {
+          //     window.location.href = 'adminlogin.html';
+          // });
+      
+          window.location.href = 'adminlogin.html'; // Simple redirect
+        }
+      </script>
+      
+    
+    <script src="AdminDashboard.js"></script>
+</body>
+</html>

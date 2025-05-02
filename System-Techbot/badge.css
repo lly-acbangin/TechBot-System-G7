@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url('./images/qcu_bg.png') no-repeat center center fixed; /* Replace with the actual background image */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.result-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-container {
+    text-align: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 700px;
+}
+
+.achievement-header {
+    text-align: center; /* Center-align the achievement icon and title */
+    margin-bottom: 10px;
+    position: relative; /* Allow positioning of the icon and text */
+}
+
+.achievement-top-icon {
+    width: 50px; /* Smaller achievement icon */
+    height: auto;
+    margin-bottom: -10px; /* Move the icon a little higher */
+    position: relative;
+    top: -30px; /* Adjust the position of the icon */
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.achievement-title {
+    font-size: 24px;
+    font-weight: bold; /* Make the "New Achievement!" text bold */
+    color: #333;
+    margin: 0;
+    position: relative;
+    top: -10px; /* Move the text a little higher */
+}
+
+.achievement-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.robot img {
+    width: 80px;
+    margin: 15px 0;
+}
+
+.achievement-icon img {
+    width: 230px; /* Larger bird icon */
+    height: auto;
+    margin-right: 20px;
+    margin-left: 15%;
+}
+
+.achievement-text {
+    text-align: center; /* Center-align the text */
+    flex: 1; /* Allow the text to take up the remaining space */
+}
+
+.message {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.achievement-name {
+    font-size: 36px; /* Make the "EARLY BIRD" text larger */
+    font-weight: bold; /* Make the "EARLY BIRD" text bold */
+    color: #000070; /* Blue color for the achievement name */
+    margin: 10px 0;
+    text-align: center; /* Center-align the achievement name */
+}
+
+.achievement-message {
+    font-size: 16px;
+    font-weight: bold; /* Make the "Great job!" message bold */
+    color: #333;
+    margin: 10px 0;
+    text-align: center; /* Center-align the message */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #900000;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    min-width: 160px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #de3c3c;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <link rel="stylesheet" href="privacypolicy.css">
+</head>
+<body>
+    <div class="policy-container">
+        <h2>Privacy Policy</h2>
+        <div class="policy-content">
+            <h3>1. Data Collection</h3>
+            <ul>
+                <li>TechBot System collects user data, including student queries, progress reports, and interaction history.</li>
+                <li>Data is collected to enhance learning experiences and improve system functionality.</li>
+            </ul>
+
+            <h3>2. Data Protection and Security</h3>
+            <ul>
+                <li>All user data is securely stored in a protected MySQL database.</li>
+                <li>Encryption and access control measures are implemented to prevent unauthorized access.</li>
+                <li>Regular system audits are conducted to identify and mitigate security risks.</li>
+            </ul>
+
+            <h3>3. User Privacy</h3>
+            <ul>
+                <li>Personal data is not shared with third parties unless required by law.</li>
+                <li>Users have the right to request access, correction, or deletion of their personal data.</li>
+                <li>The system does not collect sensitive personal information beyond educational needs.</li>
+            </ul>
+
+            <h3>4. Cookies and Tracking</h3>
+            <ul>
+                <li>The system may use cookies to store session data and enhance user experience.</li>
+                <li>Users can manage cookie settings within their browser preferences.</li>
+            </ul>
+
+            <h3>5. Policy Updates</h3>
+            <p>Quezon City University reserves the right to update these terms. Users will be notified of significant changes.</p>
+        </div>
+
+        <!-- Button positioned outside scrollable content for better visibility -->
+        <!-- privacypolicy.html -->
+<div class="agree-button-container">
+    <button id="agreeButton">I AGREE</button>
+</div>
+
+<script>
+    // Redirect to create-account.html with a query parameter
+    document.getElementById("agreeButton").addEventListener("click", function () {
+        window.location.href = "signup.html?agree=privacy";
+    });
+</script>
+    </div>
+  
+</body>
+</html>
